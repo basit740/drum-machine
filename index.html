@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metronome</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="tip">
-        (Click anywhere to hear sound...)
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Metronome</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="tip">(Click anywhere to hear sound...)</div>
 
-    <div class="metronome">
-        <div class="background-left"></div>
-        <div class="background-center">
-            <div class="core"></div>
+		<div class="metronome">
+			<div class="background-left"></div>
+			<div class="background-center">
+				<div class="core"></div>
+			</div>
+			<div class="background-right"></div>
+			<div class="arm"></div>
+		</div>
+
+
+        <div>
+            <h4>User Drums</h4>
+
+            <label>Metronome</label>
+            <input type="checkbox"  value="metronome" checked />
+
+            <label>kick drum</label>
+            <input type="checkbox" value="kick-drum" />
+			<input type="number" min="0" max="4" id="kick-drum-times" />
+
+            <label>snare drum</label>
+            <input type="checkbox" value="snare-drum" />
+			<input type="number" min="0" max="4" id="snare-drum-times" />
+
+            <label>hi hat</label>
+            <input type="checkbox" value="hi-hat" />
+			<input type="number" min="0" max="4" id="hi-hat-times" />
         </div>
-        <div class="background-right"></div>
-        <div class="arm"></div>
-    </div>
-
-    <script src="main.js"></script>
-</body>
+        <div>
+            <label">Metronome Count</label>
+            <div id= "count"> </div>
+        </div>
+		<script src="main.js"></script>
+	</body>
 </html>
